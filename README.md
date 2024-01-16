@@ -11,21 +11,27 @@ SSH clone URL: ssh://git@git.jetbrains.space/team-projects/ruby-on-rails-app/Blo
 HTTPS clone URL: https://git.jetbrains.space/team-projects/ruby-on-rails-app/Blog_sket_app.git
 
 
+## Description
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## Prerequisites
+Things you may want to cover:
 
-What things you need to install the software and how to install them.
+* Ruby version
 
-```
-Examples
-```
+* System dependencies
 
-## Deployment
+* Configuration
 
-Add additional notes about how to deploy this on a production system.
+* Database creation
 
-## Resources
+* Database initialization
 
-Add links to external resources for this project, such as CI server, bug tracker, etc.
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...

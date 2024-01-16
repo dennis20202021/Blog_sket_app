@@ -1,0 +1,65 @@
+<figure class="attachment attachment--<%= blob.representable? ? "preview" : "file" %> attachment--<%= blob.filename.extension %>">
+  <% if blob.representable? %>
+    <%= image_tag rails_representation_url(blob), width: 600, height: 800, :id => blob.try(:caption),
+        onload: "getModal('#{ blob.try(:caption) }', 'modalist', 'caption', 'img01', 'close', 'full-size')", class: "transition",
+        alt: "#{ blob.try(:caption) }", type: "#{ blob.content_type }" %>
+
+    <div id="modalist" class="modal">
+
+      <div class="container">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <a id="full-size" href="" target="_blank">
+
+          <!-- Modal Content (The Image) -->
+          <img class="modal-content" id="img01" alt="<%= blob.try(:caption) %>" src="" >
+
+          <!-- Modal Caption (Image Text) -->
+          <div id="caption"></div>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  <% end %>
+
+  <script>
+        function getModal(id, modalId, captionId, imgId, closeClass, linkId) {
+            // Get the modal
+            let modal = document.getElementById(modalId);
+
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            let img = document.getElementById(id);
+            let modalImg = document.getElementById(imgId);
+            let captionText = document.getElementById(captionId);
+            let linkImg = document.getElementById(linkId);
+            img.onclick = function () {
+                linkImg.href = this.src;
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+
+            // Get the <span> element that closes the modal
+            let span = document.getElementsByClassName(closeClass)[0];
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+  <figcaption class="attachment__caption">
+    <% if caption = blob.try(:caption) %>
+      <%= caption %>
+    <% else %>
+      <span class="attachment__name"><%= blob.filename %></span>
+      <span class="attachment__size"><%= number_to_human_size blob.byte_size %></span>
+    <% end %>
+  </figcaption>
+</figure>

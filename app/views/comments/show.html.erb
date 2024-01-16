@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<div>
+  <h2>Detailed comment about this Post</h2>
+
+  <p>
+    <%= @comment.content %>
+  </p>
+
+  <p>
+    <strong>Last created:</strong>
+    <%= time_tag @comment.created_at, "data-local": "time-ago" %>
+  </p>
+</div>
+
+<div>
+  <%= link_to "Edit this comment", edit_post_comment_path(@post) %> |
+  <%= link_to "Back to comments", post_comments_path(@post) %>
+
+  <%= button_to "Destroy this comment", [@post, @comment], method: :delete %>
+</div>

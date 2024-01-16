@@ -1,0 +1,23 @@
+<div id="<%= dom_id post %>">
+  <p>
+    <strong>Post name:</strong>
+    <%= post.post_name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= post.description %>
+  </p>
+
+  <p>
+    <strong>Posted:</strong>
+    <%= time_tag post.created_at, "data-local": "time-ago" %>
+  </p>
+
+  <p>
+    <strong>Comments:</strong>
+
+    <%= link_to (pluralize post.comments.count, "comment"), post_comments_path(post) %>
+  </p>
+
+</div>
