@@ -5,37 +5,40 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/.bundle
+.bundle
 
 # Ignore all environment files (except templates).
-/.env*
+.env*
 !/.env*.erb
 
 # Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
+log/*
+tmp/*
 !/log/.keep
 !/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-/tmp/pids/*
+tmp/pids/*
 !/tmp/pids/
 !/tmp/pids/.keep
 
 # Ignore storage (uploaded files in development and any SQLite databases).
-/storage/*
+storage/*
 !/storage/.keep
-/tmp/storage/*
+tmp/storage/*
 !/tmp/storage/
 !/tmp/storage/.keep
 
-/public/assets
+public/assets
 
 # Ignore master key for decrypting credentials and more.
-/config/master.key
+config/master.key
 
 #ignore .vscode directory
 .vscode
 
 #ignore .ruby-lsp directory
 .ruby-lsp
+
+#ignore SMTP configurations
+config/email.yml

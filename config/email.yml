@@ -1,0 +1,15 @@
+development:
+  :address: smtp.gmail.com
+  :port: 587
+  :authentication: login
+  :user_name: testguardian84@gmail.com
+  :password: nbldhfzfyaxbhyxq
+  :enable_starttls_auto: true
+production:
+  :address: smtp.gmail.com
+  :port: 587
+  :authentication: login
+  :user_name: testguardian84@gmail.com
+  :password: nbldhfzfyaxbhyxq
+  :enable_starttls_auto: true
+  

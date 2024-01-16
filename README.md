@@ -6,9 +6,9 @@
 
 Download links:
 
-SSH clone URL: ssh://git@git.jetbrains.space/team-projects/ruby-on-rails-app/Blog_sket_app.git
+SSH clone URL: git@github.com:dennis20202021/Blog_sket_app.git
 
-HTTPS clone URL: https://git.jetbrains.space/team-projects/ruby-on-rails-app/Blog_sket_app.git
+HTTPS clone URL: https://github.com/dennis20202021/Blog_sket_app.git
 
 
 ## Description
