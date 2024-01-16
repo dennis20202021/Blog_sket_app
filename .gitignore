@@ -36,3 +36,6 @@
 
 #ignore .vscode directory
 .vscode
+
+#ignore .ruby-lsp directory
+.ruby-lsp
