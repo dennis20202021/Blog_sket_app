@@ -1,4 +1,5 @@
 require "active_support/core_ext/integer/time"
+require "./config/initializers/stripe_account.rb"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -46,12 +47,12 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
 
   config.action_mailer.smtp_settings = {
-  address:              'smtp.gmail.com',
-  port:                 587,
-  domain:               'gmail.com',
-  user_name:            'testguardian84@gmail.com',
-  password:             '<key_code>',
-  authentication:       'login',
+  address:              StripeAccount.conf['smtp'],
+  port:                 StripeAccount.conf["smtp_port"],
+  domain:               StripeAccount.conf["domain"],
+  user_name:            StripeAccount.conf["sender_mail"],
+  password:             StripeAccount.conf["pusher_key"],
+  authentication:       StripeAccount.conf["smtp_authentication"],
   enable_starttls_auto: true
 }
 

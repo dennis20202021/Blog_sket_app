@@ -19,7 +19,7 @@ module SketBlogApp
     config.action_view.sanitized_allowed_tags = ['div', 'img', 'figure', 'span', 'script', 'figcaption', 'br',
     'blockquote', 'strong', 'a', 'em', 'del', 'h1', 'pre', 'ul', 'li', 'ol']
     config.action_view.sanitized_allowed_attributes = ['src', 'id', 'class', 'width', 'height', 'onload', 'alt',
-    'href', 'type', 'target']
+    'href', 'type', 'target', 'only_path']
 
     # Configuration for the application, engines, and railties goes here.
     #

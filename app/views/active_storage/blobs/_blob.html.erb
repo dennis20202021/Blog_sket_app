@@ -2,7 +2,7 @@
   <% if blob.representable? %>
     <%= image_tag rails_representation_url(blob), width: 600, height: 800, :id => blob.try(:caption),
         onload: "getModal('#{ blob.try(:caption) }', 'modalist', 'caption', 'img01', 'close', 'full-size')", class: "transition",
-        alt: "#{ blob.try(:caption) }", type: "#{ blob.content_type }" %>
+        alt: "#{ blob.try(:caption) }", type: "#{ blob.content_type }", :only_path => true %>
 
     <div id="modalist" class="modal">
 

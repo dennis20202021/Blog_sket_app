@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  default_url_options :host => "127.0.0.1:3000"
   resources :posts do
     resources :comments
   end

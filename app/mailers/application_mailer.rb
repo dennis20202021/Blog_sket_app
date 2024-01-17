@@ -1,4 +1,6 @@
+require "./config/initializers/stripe_account.rb"
+
 class ApplicationMailer < ActionMailer::Base
-  default from: "testguardian84@gmail.com"
+  default from: StripeAccount.conf["sender_mail"]
   layout "mailer"
 end
